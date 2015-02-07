@@ -1,0 +1,14 @@
+<h1 class="text-center">Choose your route</h1>
+<br>
+<div class="row">
+    <div class="col-md-4" ng-repeat="route in routes">
+        <a href="#/destination">
+            <div class="well text-center">
+
+                <h3>To: {{route.destination}}</h3>
+
+                <h3>Bus Code : {{route.code}}</h3>
+            </div>
+        </a>
+    </div>
+</div>
