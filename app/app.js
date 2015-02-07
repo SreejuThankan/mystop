@@ -1,13 +1,24 @@
+var app = require('express')();
+var http = require('http').Server(app);
+// to be used later var io = require('socket.io')(http);
 var transportAPI = require("./transportAPI.js");
-// Initialise
 transportAPI.init();
+//var default_latitude = "50.730511", default_longitude = "-1.840660";
 
-var latitude = "50.730511", longitude = "-1.840660";
-
-var result = transportAPI.findNearestFiveBusStops(latitude, longitude, function(data,response){
-    console.log(data);
+app.get('/', function(req, res) {
+    res.send("Hello there curious user, you are at the index of MyStop API");
 });
 
-if (result instanceof Error) {
-    console.log("Find Nearest Five Bus Stops failed");
-}
+app.get('/nearestBusStops', function (req, res) {
+    var latitude = req.query.lat, longitude = req.query.long;
+    var result = transportAPI.findNearestFiveBusStops(latitude, longitude, function(data){
+        res.send(data);
+    });
+    if (result instanceof Error) {
+        res.send({"error":"Failed to get the nearest bus stops"});
+    }
+});
+
+http.listen(5709, function () {
+    console.log('listening on port : 5709');
+});

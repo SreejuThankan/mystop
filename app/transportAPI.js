@@ -18,6 +18,8 @@ exports.findNearestFiveBusStops = function(latitude, longitude, callbackHandler)
         return new Error("Not all parameters are defined");
     }
     var locationInfo = "?lat="+latitude+"&lon="+longitude;
-    me.client.get("http://transportapi.com/v3/uk/bus/stops/near.json"+locationInfo+"&page=1&rpp=5"+me.keyInfo, callbackHandler);
+    me.client.get("http://transportapi.com/v3/uk/bus/stops/near.json"+locationInfo+"&page=1&rpp=5"+me.keyInfo, function(data, response) {
+        callbackHandler({"nearestBusStops" : data.stops});
+    });
 };
 
