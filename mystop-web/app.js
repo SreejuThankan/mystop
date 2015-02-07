@@ -4,11 +4,22 @@
 
     getLocation();
 
-    app.controller('BusesController', ['$scope', function ($scope) {
+    app.controller('BusesController', ['$scope','$http', function ($scope,$http) {
 
         $scope.buses = [{currentLocation: "Lansdowne"},
             {currentLocation: "Poole"},
             {currentLocation: "Salisbury"}];
+        console.log("just before jsonp")
+        //$http.jsonp("http://localhost:5709/nearestBusStops?lat=50.730511&long=-1.840660&alt=json-in-script&callback=JSON_CALLBACK").
+        //    success(function(data) {
+        //        console.log("data:");
+        //        console.log(data);
+        //        $scope.buses = JSON.parse(data.nearestBusStops);
+        //    }).error(function (data) {
+        //    $scope = "Request failed";
+        //});
+
+
     }]);
 
     app.controller('DestinationController', ['$scope', function ($scope) {
