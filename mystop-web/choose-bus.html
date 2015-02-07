@@ -1,0 +1,27 @@
+<h1 class="text-center">Which bus are you getting?</h1>
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <span class="glyphicon glyphicon-map-marker text-center"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" ng-repeat="bus in buses ">
+            <a href="#/destination">
+            <div class="well text-center">
+                <h3>From: {{bus.currentLocation}}</h3>
+
+                <h3>To: {{bus.destination}}</h3>
+
+                <h3>Bus Code : {{bus.code}}</h3>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<div>
+
+</div>
+</div>

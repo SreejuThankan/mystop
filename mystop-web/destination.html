@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>My Stop</title>
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
 <h1 class="text-center">Where are you going?</h1>
 <div class="container">
     <div class="row text-center">
         <div class="col-md-12">
             <span class="glyphicon glyphicon-map-marker text-center"></span>
         </div>
-    <div class="row text-center">
-        <ul class="list-group">
-            <li class="list-group-item">Stop 1</li>
-            <li class="list-group-item">Stop 2</li>
-            <li class="list-group-item">Stop 3</li>
-        </ul>
+        <div class="row text-center">
+            <ul class="list-group">
+                <li ng-repeat="stop in stops" class="list-group-item"><a href="#/duringjourney"><strong>{{stop.stopName}}</strong></a></li>
+            </ul>
+        </div>
     </div>
 </div>
-</body>
-</html>
