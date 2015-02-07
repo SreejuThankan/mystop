@@ -1,6 +1,9 @@
 (function () {
     var app = angular.module('mystop', ['ngRoute']);
 
+
+    getLocation();
+
     app.controller('BusesController', ['$scope', function ($scope) {
 
         $scope.buses = [{currentLocation: "Lansdowne"},
@@ -46,3 +49,8 @@
         });
     }])
 })();
+
+function getLocation(){
+    console.log("hello")
+    navigator.geolocation.getCurrentPosition(function(position){console.log(position.coords);})
+}
