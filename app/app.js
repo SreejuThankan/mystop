@@ -1,5 +1,6 @@
 var fs = require('fs');
-var app = require('express')();
+var express=require('express');
+var app = express();
 var http = require('http').Server(app);
 // to be used later var io = require('socket.io')(http);
 var transportAPI = require("./transportAPI.js");
@@ -29,6 +30,9 @@ app.get('/nextBuses', function (req, res) {
         res.send({"error":"Failed to get the next buses"});
     }
 });
+
+app.use(express.static(__dirname + '../../mystop-web'));
+console.log(__dirname);
 
 http.listen(5709, function () {
     console.log('listening on port : 5709');
