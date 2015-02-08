@@ -1,0 +1,2 @@
+
+{"nextBuses":{"2":[{"mode":"bus","line":"2","direction":"Castlepoint Centre (Strouden)","operator":"YELL","aimed_departure_time":"09:55","dir":"outbound","date":"2015-02-08","source":"Traveline"}],"2b":[{"mode":"bus","line":"2b","direction":"Library (Kinson)","operator":"YELL","aimed_departure_time":"10:35","dir":"outbound","date":"2015-02-08","source":"Traveline"}],"X3":[{"mode":"bus","line":"X3","direction":"Bournemouth Square (Bournemouth)","operator":"WD","aimed_departure_time":"11:42","dir":"outbound","date":"2015-02-08","source":"Traveline"}]}}

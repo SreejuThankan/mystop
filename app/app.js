@@ -4,7 +4,6 @@ var app = express();
 var http = require('http').Server(app);
 // to be used later var io = require('socket.io')(http);
 var transportAPI = require("./transportAPI.js");
-transportAPI.init();
 //var default_latitude = "50.730511", default_longitude = "-1.840660";
 
 app.get('/', function(req, res) {

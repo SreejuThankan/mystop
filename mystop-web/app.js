@@ -39,7 +39,6 @@
 
     app.controller('RoutesController', ['$scope', '$http', '$routeParams', function ($scope, $http,$routeParams) {
         $http.get("nextBuses?bsCode=" + $routeParams.busStopCode).success(function(data){
-            //console.log(data.nextBuses);
             $scope.routes = [];
             for (var routeCode in data.nextBuses){
                 $scope.routes.push(data.nextBuses[routeCode][0]);
@@ -50,6 +49,8 @@
 
         }).error(function(){
             log.error("could not retrieve routes from server. Using stub data instead.");
+            //call nextBusesStubData and call function to populate scope
+
         });
         //$scope.routes=[{destination: 'Christchurch', code : '3d'},{destination: 'Christchurch', code : '3d'},
         //    {destination: 'Christchurch', code : '3d'},
@@ -69,7 +70,7 @@
             controller: 'RoutesController'
         });
         $routeProvider.when('/destination', {
-            templateUrl: 'destination.html',
+            templateUrl: 'choose-stop.html',
             controller: 'DestinationController'
         });
         $routeProvider.when('/duringjourney', {
