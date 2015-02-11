@@ -30,6 +30,20 @@ app.get('/nextBuses', function (req, res) {
     }
 });
 
+app.get('/stopsForRoute', function(req,res){
+    var bus = {};
+    bus.line=req.query.line;
+    bus.date=req.query.date;
+    bus.operator = req.query.operator;
+    bus.aimed_departure_time = req.query.aimed_departure_time;
+    bus.dir=req.query.dir;
+    bus.atcocode=req.query.atcocode;
+    console.log("about to query stops for bus");
+    var result = transportAPI.findStopsForBus(bus, function(data) {;
+        res.send(data);
+    });
+
+});
 app.use(express.static(__dirname + '../../mystop-web'));
 console.log(__dirname);
 

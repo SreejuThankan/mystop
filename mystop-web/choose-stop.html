@@ -6,7 +6,14 @@
         </div>
         <div class="row text-center">
             <ul class="list-group">
-                <li ng-repeat="stop in stops" class="list-group-item"><a href="#/duringjourney"><strong>{{stop.stopName}}</strong></a></li>
+                <li ng-repeat="stop in stops" class="list-group-item"><a href="#/duringjourney">
+                    <strong>{{stop.name}}</strong>
+                    <strong>{{stop.line}}</strong>
+                    <strong>{{stop.operator}}</strong>
+                    <strong>{{stop.time}}</strong>
+                    <strong>{{stop.dir}}</strong>
+                    <strong>{{stop.atcocode}}</strong>
+                </a></li>
             </ul>
         </div>
     </div>

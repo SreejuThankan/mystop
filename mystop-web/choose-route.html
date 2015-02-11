@@ -2,12 +2,12 @@
 <br>
 <div class="row">
     <div class="col-md-4" ng-repeat="route in routes">
-        <a href="#/destination">
+        <a href="#/stopsForRoute/{{route.operator}}/{{route.line}}/{{route.direction}}/{{route.date}}/{{route.aimed_departure_time}}/{{route.atcocode}}">
             <div class="well text-center">
 
                 <h3>To : {{route.direction}}</h3>
 
-                <h3>Bus Code : {{route.code}}</h3>
+                <h3>Bus Code : {{route.line}}</h3>
 
                 <h3>Operator : {{route.operator}}</h3>
 
