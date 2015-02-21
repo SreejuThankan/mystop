@@ -1,33 +1,43 @@
 var fs = require('fs');
 var express=require('express');
 var app = express();
-var http = require('http').Server(app);
+
+var http = require('http');
+var server = http.Server(app);
 // to be used later var io = require('socket.io')(http);
 var transportAPI = require("./transportAPI.js");
 //var default_latitude = "50.730511", default_longitude = "-1.840660";
 
 app.get('/', function(req, res) {
+    res.statusCode = 500;
     res.send("Hello there curious user !");
 });
 
 app.get('/nearestBusStops', function (req, res) {
+    console.log("nearestBusStops called");
     var latitude = req.query.lat, longitude = req.query.long;
-    var result = transportAPI.findNearestFiveBusStops(latitude, longitude, function(data){
-        res.send(data);
+    transportAPI.findNearestFiveBusStops(latitude, longitude, function(err, data){
+        if(err) {
+            console.error("could not retreive 5 nearest busstops",err);
+            res.statusCode=500;
+            res.send({"error": "Failed to access TransportAPI"});
+        }else{
+            res.send(data);
+        }
+
     });
-    if (result instanceof Error) {
-        res.send({"error":"Failed to get the nearest bus stops"});
-    }
 });
 
 app.get('/nextBuses', function (req, res) {
     var busStopCode = req.query.bsCode;
-    var result = transportAPI.findNextFiveBusesFromStop(busStopCode, function(data){
-        res.send(data);
+    transportAPI.findNextFiveBusesFromStop(busStopCode, function(err, data){
+        if(err) {
+            res.statusCode=500;//more appropiate http status code?
+            res.send({"error": "Failed to access TransportAPI"});
+        }else{
+            res.send(data);
+        }
     });
-    if (result instanceof Error) {
-        res.send({"error":"Failed to get the next buses"});
-    }
 });
 
 app.get('/stopsForRoute', function(req,res){
@@ -39,14 +49,19 @@ app.get('/stopsForRoute', function(req,res){
     bus.dir=req.query.dir;
     bus.atcocode=req.query.atcocode;
     console.log("about to query stops for bus");
-    var result = transportAPI.findStopsForBus(bus, function(data) {;
-        res.send(data);
+    transportAPI.findStopsForBus(bus, function(err, data) {;
+        if(err) {
+            res.statusCode=500;
+            res.send({error:"Could not access Transport API"});
+        }else{
+            res.send(data);
+        }
     });
 
 });
 app.use(express.static(__dirname + '../../mystop-web'));
 console.log(__dirname);
 
-http.listen(5709, function () {
+server.listen(5709, function () {
     console.log('listening on port : 5709');
 });

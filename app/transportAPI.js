@@ -14,8 +14,15 @@ exports.findNearestFiveBusStops = function(latitude, longitude, callbackHandler)
         return new Error("Not all parameters are defined");
     }
     var locationInfo = "?lat="+latitude+"&lon="+longitude;
-    client.get(BASE_URL + "stops/near.json"+locationInfo+"&page=1&rpp=5&"+keyInfo, function(data) {
-        callbackHandler({nearestBusStops : data.stops});
+    var req = client.get(BASE_URL + "stops/near.json"+locationInfo+"&page=1&rpp=5&"+keyInfo, function(data) {
+        console.log("11");
+        callbackHandler(null, {nearestBusStops : data.stops});
+    });
+    console.log("3");
+    req.on('error',function() {
+        console.log("4");
+        callbackHandler("could not access transport api");
+
     });
 };
 
@@ -27,7 +34,7 @@ exports.findNextFiveBusesFromStop = function(busStopCode, callbackHandler) {
     var dateTime = moment.format('YYYY-MM-DD/HH:mm/');
     var parameters = busStopCode+"/"+dateTime;
     var url = BASE_URL + "stop/" + parameters + "timetable.json?group=route&page=1&rpp=5&" + keyInfo;
-    client.get(url, function(data) {
+    var req = client.get(url, function(data) {
         var departures = data.departures, nextDepartures = {};
         for (var route in departures) {
             var len = departures[route].length;
@@ -37,14 +44,24 @@ exports.findNextFiveBusesFromStop = function(busStopCode, callbackHandler) {
                 nextDepartures[route] = departures[route];
             }
         }
-        callbackHandler({"nextBuses" : nextDepartures, "atcocode" : data.atcocode});
+        callbackHandler(null,{"nextBuses" : nextDepartures, "atcocode" : data.atcocode});
+    });
+
+    req.on('error',function(){
+        callbackHandler("Could not access Transport API");
     });
 };
 
 exports.findStopsForBus = function(bus,callbackHandler){
 
     var url = BASE_URL + "route/" + bus.operator + "/" + bus.line + "/" + bus.dir + "/" + bus.atcocode + "/" + bus.date + "/" + bus.aimed_departure_time + "/" + "timetable.json?" + keyInfo;
-    client.get(url, callbackHandler);
+    var req = client.get(url, function(data) {
+        callbackHandler(null,data);
+    });
+
+    req.on('error',function() {
+       callbackHandler("Could not access Transport API");
+    });
 }
 
 

@@ -1,0 +1,64 @@
+{
+  "nearestBusStops": [
+    {
+      "atcocode": "1290BOB20317",
+      "smscode": "boudwtj",
+      "name": "Portman Hotel",
+      "mode": "bus",
+      "bearing": "NW",
+      "locality": "Boscombe",
+      "indicator": "NW-bound",
+      "longitude": -1.84036,
+      "latitude": 50.73028,
+      "distance": 33
+    },
+    {
+      "atcocode": "1290BOB20320",
+      "smscode": "boudwtp",
+      "name": "Portman Hotel",
+      "mode": "bus",
+      "bearing": "SE",
+      "locality": "Boscombe",
+      "indicator": "SE-bound",
+      "longitude": -1.83956,
+      "latitude": 50.72979,
+      "distance": 111
+    },
+    {
+      "atcocode": "1290BOB20319",
+      "smscode": "boudwmw",
+      "name": "Kings Park",
+      "mode": "bus",
+      "bearing": "SE",
+      "locality": "Springbourne",
+      "indicator": "SE-bound",
+      "longitude": -1.84188,
+      "latitude": 50.73189,
+      "distance": 176
+    },
+    {
+      "atcocode": "1290BOB20316",
+      "smscode": "bougadm",
+      "name": "Centenary Way",
+      "mode": "bus",
+      "bearing": "SE",
+      "locality": "Boscombe",
+      "indicator": "SE-bound",
+      "longitude": -1.83878,
+      "latitude": 50.72914,
+      "distance": 202
+    },
+    {
+      "atcocode": "1290BOB20315",
+      "smscode": "bougada",
+      "name": "Sovereign Centre",
+      "mode": "bus",
+      "bearing": "E",
+      "locality": "Boscombe",
+      "indicator": "E-bound",
+      "longitude": -1.83951,
+      "latitude": 50.72823,
+      "distance": 266
+    }
+  ]
+}

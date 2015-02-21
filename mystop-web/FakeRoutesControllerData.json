@@ -1,0 +1,41 @@
+{
+  "nextBuses": {
+    "2": [
+      {
+        "mode": "bus",
+        "line": "2",
+        "direction": "Bournemouth Square (Bournemouth)",
+        "operator": "YELL",
+        "aimed_departure_time": "21:14",
+        "dir": "inbound",
+        "date": "2015-02-11",
+        "source": "Traveline"
+      }
+    ],
+    "2b": [
+      {
+        "mode": "bus",
+        "line": "2b",
+        "direction": "Bournemouth Square (Bournemouth)",
+        "operator": "YELL",
+        "aimed_departure_time": "20:44",
+        "dir": "inbound",
+        "date": "2015-02-11",
+        "source": "Traveline"
+      }
+    ],
+    "U3": [
+      {
+        "mode": "bus",
+        "line": "U3",
+        "direction": "Bournemouth University (Talbot Heath)",
+        "operator": "WD",
+        "aimed_departure_time": "20:47",
+        "dir": "outbound",
+        "date": "2015-02-11",
+        "source": "Traveline"
+      }
+    ]
+  },
+  "atcocode": "1290BOB20317"
+}

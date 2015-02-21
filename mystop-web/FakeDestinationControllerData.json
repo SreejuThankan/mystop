@@ -1,0 +1,195 @@
+{
+  "request_time": "2015-02-11T20:43:18+00:00",
+  "operator": "YELL",
+  "line": "2",
+  "origin_atcocode": "1290BOB20317",
+  "stops": [
+    {
+      "time": "21:14",
+      "atcocode": "1290BOB20317",
+      "smscode": "boudwtj",
+      "name": "Portman Hotel",
+      "locality": "Boscombe, Bournemouth",
+      "indicator": "NW-bound",
+      "latitude": 50.73028,
+      "longitude": -1.84036,
+      "bearing": "NW"
+    },
+    {
+      "time": "21:15",
+      "atcocode": "1290BOB20318",
+      "smscode": "boudwmp",
+      "name": "Kings Park",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "NW-bound",
+      "latitude": 50.73295,
+      "longitude": -1.84301,
+      "bearing": "NW"
+    },
+    {
+      "time": "21:17",
+      "atcocode": "1290BOB20322",
+      "smscode": "boudwgp",
+      "name": "Queens Park Hotel",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "SW-bound",
+      "latitude": 50.73451,
+      "longitude": -1.84666,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:17",
+      "atcocode": "1290BOB20324",
+      "smscode": "boudwdp",
+      "name": "St Marys Church",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "SW-bound",
+      "latitude": 50.7334,
+      "longitude": -1.84898,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:18",
+      "atcocode": "1290BOB20326",
+      "smscode": "boudtwj",
+      "name": "Capstone Place",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "SW-bound",
+      "latitude": 50.73232,
+      "longitude": -1.85128,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:19",
+      "atcocode": "1290BOB20329",
+      "smscode": "boudtpa",
+      "name": "Springbourne Library",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "SW-bound",
+      "latitude": 50.73139,
+      "longitude": -1.85326,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:20",
+      "atcocode": "1290BOB20331",
+      "smscode": "boudtgj",
+      "name": "Stewart Close",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "SW-bound",
+      "latitude": 50.72975,
+      "longitude": -1.8567,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:20",
+      "atcocode": "1290BOB20333",
+      "smscode": "boudpwj",
+      "name": "Ophir Gardens",
+      "locality": "Springbourne, Boscombe",
+      "indicator": "SW-bound",
+      "latitude": 50.72843,
+      "longitude": -1.85948,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:22",
+      "atcocode": "1290BOB20455",
+      "smscode": "boudpjg",
+      "name": "Bournemouth Station",
+      "locality": "Bournemouth",
+      "indicator": "Stop 9",
+      "latitude": 50.72623,
+      "longitude": -1.8618,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:22",
+      "atcocode": "1290BOB20422",
+      "smscode": "boudpaw",
+      "name": "Unisys",
+      "locality": "Lansdowne, Bournemouth",
+      "indicator": "SW-bound",
+      "latitude": 50.72453,
+      "longitude": -1.86362,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:23",
+      "atcocode": "1290BOB20417",
+      "smscode": "boudmgm",
+      "name": "Lansdowne",
+      "locality": "Lansdowne, Bournemouth",
+      "indicator": "SW-bound",
+      "latitude": 50.72244,
+      "longitude": -1.86582,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:24",
+      "atcocode": "1290BOB20412",
+      "smscode": "boudmam",
+      "name": "Lansdowne",
+      "locality": "Lansdowne, Bournemouth",
+      "indicator": "SW-bound",
+      "latitude": 50.7212,
+      "longitude": -1.86778,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:25",
+      "atcocode": "1290BOB20410",
+      "smscode": "boudjma",
+      "name": "Top of Bath Hill",
+      "locality": "Lansdowne, Bournemouth",
+      "indicator": "NW-bound",
+      "latitude": 50.71962,
+      "longitude": -1.87048,
+      "bearing": "NW"
+    },
+    {
+      "time": "21:26",
+      "atcocode": "1290BOB20408",
+      "smscode": "boudgwg",
+      "name": "Royal Bath Hotel",
+      "locality": "Bournemouth",
+      "indicator": "SW-bound",
+      "latitude": 50.71714,
+      "longitude": -1.87377,
+      "bearing": "SW"
+    },
+    {
+      "time": "21:27",
+      "atcocode": "1290BOB20404",
+      "smscode": "boudgdt",
+      "name": "Bournemouth Pier",
+      "locality": "Bournemouth",
+      "indicator": "Stand BB",
+      "latitude": 50.71668,
+      "longitude": -1.87704,
+      "bearing": "W"
+    },
+    {
+      "time": "21:28",
+      "atcocode": "1290BOB20384",
+      "smscode": "boudagp",
+      "name": "Exeter Road",
+      "locality": "Bournemouth",
+      "indicator": "Stand LL",
+      "latitude": 50.7192,
+      "longitude": -1.88028,
+      "bearing": "N"
+    },
+    {
+      "time": "21:29",
+      "atcocode": "1290BOB20385",
+      "smscode": "boudamg",
+      "name": "Bournemouth Square",
+      "locality": "Bournemouth",
+      "indicator": "Stand M",
+      "latitude": 50.72009,
+      "longitude": -1.87923,
+      "bearing": "W"
+    }
+  ]
+}
