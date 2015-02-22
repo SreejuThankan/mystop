@@ -61,7 +61,6 @@ app.get('/stopsForRoute', function(req,res){
     console.log("about to query stops for bus");
     transportAPI.findStopsForBus(bus, function(err, data) {;
         if(err) {
-            res.statusCode=500;
             res.send({error:"Could not access Transport API"});
         }else{
             res.send(data);
