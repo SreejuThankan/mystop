@@ -7,9 +7,6 @@
             $http.get("nearestBusStops?lat=50.730511&long=-1.840660").success(function (data) {
                     callback(data.nearestBusStops);
                 }).error(function () {
-                    $http.get("FakeStartBusStopControllerData.json").success(function (data) {
-                        callback(data.nearestBusStops);
-                    });
                 });
         };
 
@@ -17,23 +14,14 @@
             $http.get("nextBuses?bsCode=" + busStopCode).success(function(data){
                 callback(data);
             }).error(function(){
-                console.error("could not retrieve routes from server. Using stub data instead.");
-                $http.get('FakeRoutesControllerData.json').success(function(data){
-                    callback(data);
-                });
-
             });
         };
 
         this.getStopsForBus = function(busInfo,callback){
             $http.get("stopsForRoute?operator=" + busInfo.operator + "&line=" + busInfo.line + "&date=" + busInfo.date + "&aimed_departure_time=" + busInfo.aimed_departure_time + "&dir=inbound&atcocode=" + busInfo.atcocode).success(function(data) {
-                console.log("success");
+                console.log("success",data);
                 callback(data.stops);
             }).error(function(){
-                console.error("could not retrieve stops for route frin API - using stub data instead");
-                $http.get('FakeDestinationControllerData.json').success(function(data) {
-                    callback(data.stops);
-                });
             });
         };
 

@@ -5,8 +5,18 @@ var app = express();
 var http = require('http');
 var server = http.Server(app);
 // to be used later var io = require('socket.io')(http);
-var transportAPI = require("./transportAPI.js");
+
+var useStubTransportData = process.argv[2];
+var transportAPI;
+if(!useStubTransportData) {
+    transportAPI = require("./transportAPI.js");
+}else{
+    transportAPI = require("./stubTransportAPI.js");
+}
+
 //var default_latitude = "50.730511", default_longitude = "-1.840660";
+
+
 
 app.get('/', function(req, res) {
     res.statusCode = 500;
