@@ -69,7 +69,7 @@ app.get('/stopsForRoute', function(req,res){
     });
 
 });
-app.use(express.static(__dirname + '../../mystop-web'));
+app.use(express.static(__dirname + '../../mystop-web/app'));
 console.log(__dirname);
 
 server.listen(5709, function () {

@@ -83,19 +83,19 @@
 
     app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'choose-start.html',
+            templateUrl: '../choose-start.html',
             controller: 'StartBusStopController'
         });
         $routeProvider.when('/chooseRoute/:busStopCode', {
-            templateUrl: 'choose-route.html',
+            templateUrl: '../choose-route.html',
             controller: 'RoutesController'
         });
         $routeProvider.when('/stopsForRoute/:operator/:line/:dir/:date/:aimed_departure_time/:atcocode', {
-            templateUrl: 'choose-stop.html',
+            templateUrl: '../choose-stop.html',
             controller: 'DestinationController'
         });
         $routeProvider.when('/duringjourney', {
-            templateUrl: 'during-journey.html',
+            templateUrl: '../during-journey.html',
             controller: 'DuringJourneyController'
         });
     }])
